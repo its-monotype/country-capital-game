@@ -9,7 +9,7 @@ interface Option {
   state: OptionState;
 }
 
-const optionStateColorMap: Record<OptionState, ButtonProps['color']> = {
+const optionStateButtonColorMap: Record<OptionState, ButtonProps['color']> = {
   default: 'neutral',
   selected: 'primary',
   wrong: 'critical',
@@ -125,7 +125,7 @@ export function CountryCapitalGame({ data }: { data: Record<string, string> }) {
           <Button
             key={option.value}
             size="xlarge"
-            color={optionStateColorMap[option.state]}
+            color={optionStateButtonColorMap[option.state]}
             onClick={() => handleButtonClick(option)}
           >
             {option.value}
